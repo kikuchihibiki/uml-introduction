@@ -1,0 +1,10 @@
+@startuml 演習2-5
+left to right direction
+actor 出荷担当者 #DDDDDD;line:black;line.bold;
+rectangle 販売管理システム{
+    usecase 注文状況を確認する 
+    usecase 出荷状況の登録をする 
+}
+出荷担当者 --> 注文状況を確認する
+出荷担当者 --> 出荷状況の登録をする
+@enduml
