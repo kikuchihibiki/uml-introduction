@@ -1,0 +1,34 @@
+@startuml
+left to right direction
+object "<u>Aさん:利用者</u>" as A{
+
+}
+
+object "<u>Bさん:利用者</u>" as B{
+
+}
+
+object "<u>ホテルUML:ホテル</u>" as hotel{
+    部屋 = 301号室
+    部屋 = 302号室
+}
+
+object "<u>301号室:部屋</u>" as room1{
+    タイプ = シングル
+    価格 = 11000円
+    キャンペーン価格 = 9000円
+}
+
+object "<u>302号室:部屋</u>" as room2{
+    タイプ = シングル
+    価格 = 11000円
+    キャンペーン価格 = 9000円
+}
+
+
+
+hotel -- room1
+hotel -- room2
+room1 -- A
+room2 -- B
+@enduml
