@@ -1,53 +1,53 @@
 @startuml
 left to right direction
-    object "<u>顧客1:重要顧客</u>" as 1{
+    object "<u>顧客1:重要顧客</u>" as a{
         氏名=高橋洋平さん
     }
 
-    object "<u>注文1:注文</u>" as 2{
+    object "<u>注文1:注文</u>" as b{
         注文日=11月21日
         数量=1台
     }
 
-    object "<u>注文2:注文</u>" as 3{
+    object "<u>注文2:注文</u>" as c{
         注文日=11月21日
         数量=2台
     }
 
-    object "<u>商品1:商品</u>" as 4{
+    object "<u>商品1:商品</u>" as d{
         商品名=テレビ
         型式=V12345
     }
 
-    object "<u>商品2:商品</u>" as 5{
+    object "<u>商品2:商品</u>" as e{
         商品名=冷蔵庫
         型式=R8765
     }
 
-    object "<u>顧客2:顧客</u>" as 6{
+    object "<u>顧客2:顧客</u>" as f{
         氏名=高田利恵さん
     }
 
-    object "<u>注文3:注文</u>" as 7{
+    object "<u>注文3:注文</u>" as g{
         注文日=12月23日
         数量=1台
     }
 
-    object "<u>顧客3:顧客</u>" as 8{
+    object "<u>顧客3:顧客</u>" as h{
         氏名=大坪直之さん
     }
 
-    object "<u>商品3:商品</u>" as 9{
+    object "<u>商品3:商品</u>" as i{
         商品名=プロジェクタ
         型式=P1122
     }
 
-    
-              
-    1--2  
-    1--3
-    2--4
-    3--5
-    6--7
-    7--5
+
+
+    a--b  
+    a--c
+    b--d
+    c--e
+    f--g
+    g--e
 @enduml
