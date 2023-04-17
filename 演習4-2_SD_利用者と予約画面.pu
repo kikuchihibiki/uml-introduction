@@ -1,0 +1,14 @@
+@startuml
+hide footbox
+participant "利用者:user" as a
+participant ":ログイン画面" as b
+mainframe sd ログイン
+
+
+activate b
+a ->> b : ログインメッセージを送る()
+b -> b:認証呼び出し()
+activate b
+deactivate b
+
+@enduml

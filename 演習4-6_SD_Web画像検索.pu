@@ -1,0 +1,23 @@
+@startuml
+hide footbox
+Actor ":ユーザー" as a
+participant ":ブラウザ" as b <<boundary>>
+participant ":Web サーバー" as c <<entity>>
+participant ":画像サーバー" as d <<entity>>
+
+
+activate a
+a->b:画像のリンクを押す
+activate b
+b->c:ファイル名を伝える
+activate c
+c->d:該当画像ファイルを検索
+activate d
+d->c:画像を閲覧可能状態に変更
+deactivate d
+c->b:画像ファイルを再生
+deactivate c
+b->a:画像ファイルを再生
+deactivate b
+deactivate a
+@enduml
