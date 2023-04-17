@@ -7,7 +7,7 @@ participant ":注文" as d <<entiy>>
 
 
 activate a
-a->b
+a->b:商品情報確認()
 activate b       
 b->c:商品情報確認()
 activate c
