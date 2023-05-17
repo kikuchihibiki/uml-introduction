@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+actor 利用者 as user
+actor 看護師 as nurse
+rectangle 診断予約システム{
+    usecase メニュー as mnue
+    usecase 予約と確認画面 as reserve
+    usecase あなたの順番画面 as order
+    usecase 名前か電話番号を入力 as entered
+    usecase 登録を取り消す as derete
+    usecase 患者の番号を一つ増やす as plus
+    usecase 診察終了 as end
+}
+user -->mnue
+mnue -->reserve
+mnue -->entered
+reserve -->entered
+entered ..> order : << include >>
+entered ..> derete : << include >>
+derete -->mnue 
+nurse --> end
+end ..> plus : << extend >>
+@enduml
+
+
+
