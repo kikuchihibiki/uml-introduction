@@ -1,0 +1,21 @@
+@startuml
+hide footbox
+Actor ":客" as a
+participant ":自動販売機" as b
+participant ":ベンダー装置" as c
+mainframe sd 自動販売機
+
+
+activate a
+activate b
+a-->b:お金を入れる
+a-->b:ボタンを押す
+b-->c:ドリンクを出す
+activate c
+c-->b:ドリンクを受け取る
+deactivate c
+b-->a:ドリンクを受け取る
+deactivate b
+deactivate a
+
+@enduml
